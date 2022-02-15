@@ -1,0 +1,36 @@
+.marvel-chracters {
+    margin: 15px;
+}
+
+.marvel-chracters__search {
+    text-align: center;
+}
+
+.marvel-chracters__character {
+    display              : grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-top     : 10px;
+    padding-left    : 10px;
+    padding-right   : 10px;
+    text-align      : center;
+}
+
+.marvel-chracters__buttons {
+    margin               : 0 auto;
+    display              : grid;
+    grid-template-columns: 49% 2% 49%;
+    grid-column-gap      : 7px;
+    margin-top           : 15px;
+}
+
+.marvel-chracters__buttons--next {
+    text-align: right;
+}
+
+.marvel-chracters__buttons--back {
+    text-align: left;
+}

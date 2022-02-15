@@ -1,0 +1,32 @@
+.character {
+    border        : 1px solid black;
+    border-radius : 10px;
+    margin-bottom : 15px;
+    padding-bottom: 15px;
+}
+
+.character__title {
+    text-align: center;
+}
+
+.character__content {
+    display              : grid;
+    grid-template-columns: 40% 60%;
+    grid-column-gap      : 7px;
+}
+
+.character__content--item {
+    display              : grid;
+    grid-template-columns: 64% 1% 15%;
+    grid-column-gap      : 7px;
+    font-size            : 11x;
+}
+
+.character__content--image {
+    margin: 0 auto;
+}
+
+img {
+    height: 120px;
+    width : 120px;
+}

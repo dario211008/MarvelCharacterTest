@@ -1,0 +1,26 @@
+<div class="marvel-chracters">
+    <div class="marvel-chracters__title">
+        <h3>Personajes de Marvel</h3>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="marvel-chracters__search">
+        <app-search-character (textSearch)="getTextSearch($event)"></app-search-character>
+    </div>
+    <div class="marvel-chracters__character">
+        <div *ngFor="let item of resultsByPage" class="grid-item">
+            <app-character [image]="item.thumbnail.path+'.'+item.thumbnail.extension" [name]="item.name"
+                [comicsNumber]="item.comics.returned" [seriesNumber]="item.series.returned"
+                [storiesNumber]="item.stories.returned" [eventsNumber]="item.events.returned"></app-character>
+        </div>
+    </div>
+    <div class="marvel-chracters__buttons">
+        <div class="marvel-chracters__buttons--next">
+            <button mat-flat-button color="warn" (click)="previousPage()" [disabled]="actualPage <= 0">Anterior</button>
+        </div>
+        <div></div>
+        <div class="marvel-chracters__buttons--back">
+            <button mat-flat-button color="warn" (click)="nextPage()"
+                [disabled]="this.totalPages <= this.actualPage + 1">Siguiente</button>
+        </div>
+    </div>
+</div>

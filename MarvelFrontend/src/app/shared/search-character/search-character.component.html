@@ -1,0 +1,13 @@
+<div class="search-character">
+    <form [formGroup]="formSearch">
+        <div class="search-character__input">
+            <mat-form-field appearance="outline">
+                <mat-label>Personaje</mat-label>
+                <input matInput placeholder="Personaje" type="search" formControlName="searchInput" matInputAutofocus (input)="getEmptyValue($event)">
+            </mat-form-field>&nbsp;
+            <button mat-flat-button color="primary" (click)="searchCharacter()">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </form>
+</div>
